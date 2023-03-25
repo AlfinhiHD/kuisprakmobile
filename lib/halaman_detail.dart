@@ -66,7 +66,7 @@ class _HalamanDetailState extends State<HalamanDetail> {
                     height: 20.0
                 ),
                 Text(
-                  "[" + widget.place.type[0] + "]",
+                  widget.place.type.toString(),
                   style: TextStyle(fontSize: 18),
                 ),
                 SizedBox(
@@ -80,7 +80,7 @@ class _HalamanDetailState extends State<HalamanDetail> {
                     height: 20.0
                 ),
                 Text(
-                  "[" + widget.place.weakness[0] + "]",
+                  widget.place.weakness.toString(),
                   style: TextStyle(fontSize: 18),
                 ),
                 SizedBox(
@@ -94,8 +94,7 @@ class _HalamanDetailState extends State<HalamanDetail> {
                     height: 20.0
                 ),
                 Text(
-                  "Previous",
-                  // "[" + widget.place.prevEvolution[0] + "]",
+                  widget.place.prevEvolution.toString(),
                   style: TextStyle(fontSize: 18),
                 ),
                 SizedBox(
@@ -109,16 +108,23 @@ class _HalamanDetailState extends State<HalamanDetail> {
                     height: 20.0
                 ),
                 Text(
-                  "Next",
-                  // "[" + widget.place.nextEvolution[0] + "]",
+                  widget.place.nextEvolution.toString(),
                   style: TextStyle(fontSize: 18),
                 ),
                 SizedBox(
                     height: 20.0
                 ),
+
                 ],
+            ),
+            ),
+            floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              // Add your onPressed code here!
+            },
+            backgroundColor: Colors.red,
+            child: const Icon(Icons.search),
     ),
-            )
     ));
   }
 }
